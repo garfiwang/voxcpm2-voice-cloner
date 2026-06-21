@@ -23,15 +23,17 @@
 - 約 5GB 硬碟空間（模型權重）
 - 麥克風
 
-## 快速開始（雙擊即可）
+## 快速開始
 
 ### 1. 安裝
 
-雙擊 `install.bat`（或 `install.ps1`）。自動完成所有設定。
+- **Windows**: 雙擊 `install.bat`（或 `install.ps1`）自動完成設定。
+- **macOS/Linux**: 執行 `chmod +x install.sh && ./install.sh`。
 
 ### 2. 錄音
 
-雙擊 `start.bat` → 瀏覽器打開 → 取名 → 對著麥克風念稿 → 儲存。
+- **Windows**: 雙擊 `start.bat` → 瀏覽器打開 → 取名 → 對著麥克風念稿 → 儲存。
+- **macOS/Linux**: 執行 `.venv/bin/python webui_record.py`。
 
 ### 3. 使用（透過 AI Agent）
 
@@ -52,30 +54,50 @@ Agent 會自動找到對應聲音、生成語音、回傳音檔。
 
 **方式 A：網頁介面（推薦）**
 
+Windows:
 ```powershell
 .\.venv\Scripts\python.exe webui_record.py
+```
+macOS/Linux:
+```bash
+.venv/bin/python webui_record.py
 ```
 
 瀏覽器自動開啟，有錄音按鈕、逐字稿顯示，錄完自動存檔。
 
 **方式 B：命令列**
 
+Windows:
 ```powershell
 .\.venv\Scripts\python.exe record.py --voice 我的聲音
+```
+macOS/Linux:
+```bash
+.venv/bin/python record.py --voice 我的聲音
 ```
 
 螢幕會顯示一段文字，對著麥克風自然地朗讀，念完按 Enter 停止。
 
 ### 3. 生成克隆語音
 
+Windows:
 ```powershell
 .\.venv\Scripts\python.exe clone.py "你好，這是我的克隆聲音。" --voice 我的聲音
+```
+macOS/Linux:
+```bash
+.venv/bin/python clone.py "你好，這是我的克隆聲音。" --voice 我的聲音
 ```
 
 或從文字檔生成：
 
+Windows:
 ```powershell
 .\.venv\Scripts\python.exe clone.py --file my_script.txt
+```
+macOS/Linux:
+```bash
+.venv/bin/python clone.py --file my_script.txt
 ```
 
 輸出檔案預設在 `output/cloned_voice.wav`。

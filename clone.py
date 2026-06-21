@@ -31,10 +31,12 @@ def detect_device():
             gpu_type = 'cuda'
         elif hasattr(torch, 'xpu') and torch.xpu.is_available():
             gpu_type = 'xpu'
+        elif torch.backends.mps.is_available():
+            gpu_type = 'mps'
         else:
             gpu_type = 'cpu'
 
-    device_map = {'cuda': 'cuda', 'xpu': 'xpu', 'cpu': 'cpu'}
+    device_map = {'cuda': 'cuda', 'xpu': 'xpu', 'mps': 'mps', 'cpu': 'cpu'}
     return device_map.get(gpu_type, 'cpu')
 
 
