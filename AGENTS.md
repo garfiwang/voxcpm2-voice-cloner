@@ -45,9 +45,16 @@ python record.py --voice <聲音名稱>
 ## 裝置偵測
 
 執行 clone.py 或 dialogue.py 時會自動偵測裝置：
+- Apple Silicon (Mac) → MPS 模式（已深度支援，速度提升 ~5x）
 - NVIDIA GPU → CUDA 模式
 - Intel Arc GPU → XPU 模式（需 patch，install.ps1 已處理）
 - 無獨顯 → CPU 模式（較慢）
+
+## 專案文檔與外部連結
+
+- **完整實戰操作指南**：[GUIDE.md](GUIDE.md)（含日常語音克隆與 AI 歌手翻唱完整步驟）
+- **更新日誌**：[CHANGELOG.md](CHANGELOG.md)
+- **Obsidian 專案筆記**：`/Users/garfiwang/Documents/Obsidian/[Project] 克隆語音與AI歌手/專案工作流程.md`
 
 ## 常見使用者指令對照
 
