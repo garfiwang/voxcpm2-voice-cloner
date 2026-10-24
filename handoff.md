@@ -25,4 +25,4 @@
 ## 🕐 最後更新
 - **時間**：2026-10-24 16:08 (GMT+8)
 - **更新者**：Antigravity @ M3-Air---garfiwang-3.local
-- **Git Push 狀態**：待推（L2 執行後回填）
+- **Git Push 狀態**：✅ 已推至 GitHub (`garfiwang/voxcpm2-voice-cloner`)
